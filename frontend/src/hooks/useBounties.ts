@@ -35,7 +35,7 @@ export function useBounty(bountyId: bigint | number | undefined) {
         functionName: 'getBounty',
         args: id !== undefined ? [id] : undefined,
         query: {
-            enabled: id !== undefined && id > 0n,
+            enabled: id !== undefined && id > BigInt(0),
         },
     });
 
@@ -77,7 +77,7 @@ export function useBountyAssignment(bountyId: bigint | number | undefined) {
         functionName: 'bountyAssignments',
         args: id !== undefined ? [id] : undefined,
         query: {
-            enabled: id !== undefined && id > 0n,
+            enabled: id !== undefined && id > BigInt(0),
         },
     });
 
@@ -170,11 +170,11 @@ export function useRecentBounties(limit: number = 10) {
     const { count, isLoading: isCountLoading } = useBountyCount();
 
     // Generate IDs for the last `limit` bounties
-    const startId = count > BigInt(limit) ? count - BigInt(limit) + 1n : 1n;
+    const startId = count > BigInt(limit) ? count - BigInt(limit) + BigInt(1) : BigInt(1);
     const endId = count;
     const ids: bigint[] = [];
 
-    for (let i = endId; i >= startId && i > 0n; i--) {
+    for (let i = endId; i >= startId && i > BigInt(0); i--) {
         ids.push(i);
         if (ids.length >= limit) break;
     }

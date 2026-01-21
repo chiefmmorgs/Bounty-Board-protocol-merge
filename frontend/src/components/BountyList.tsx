@@ -56,7 +56,7 @@ export function BountyList({ limit = 10, filterStatus }: BountyListProps) {
                 <div className="text-4xl mb-3">🔍</div>
                 <p className="text-gray-400">No bounties found</p>
                 <p className="text-gray-500 text-sm mt-1">
-                    {totalCount > 0n
+                    {totalCount > BigInt(0)
                         ? 'Try adjusting your filters'
                         : 'Be the first to create one!'}
                 </p>

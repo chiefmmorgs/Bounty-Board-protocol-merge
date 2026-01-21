@@ -17,12 +17,12 @@ export function useEscrowBalance(bountyId: bigint | number | undefined) {
         functionName: 'escrowBalance',
         args: id !== undefined ? [id] : undefined,
         query: {
-            enabled: id !== undefined && id > 0n,
+            enabled: id !== undefined && id > BigInt(0),
         },
     });
 
     return {
-        balance: data ?? 0n,
+        balance: data ?? BigInt(0),
         balanceFormatted: data ? formatEther(data) : '0',
         isLoading,
         isError,
@@ -55,9 +55,9 @@ export function useEscrowAccount(address: `0x${string}` | undefined) {
 
     return {
         account,
-        totalDeposited: account?.totalDeposited ?? 0n,
-        availableBalance: account?.availableBalance ?? 0n,
-        lockedAmount: account?.lockedAmount ?? 0n,
+        totalDeposited: account?.totalDeposited ?? BigInt(0),
+        availableBalance: account?.availableBalance ?? BigInt(0),
+        lockedAmount: account?.lockedAmount ?? BigInt(0),
         totalDepositedFormatted: account ? formatEther(account.totalDeposited) : '0',
         availableBalanceFormatted: account ? formatEther(account.availableBalance) : '0',
         lockedAmountFormatted: account ? formatEther(account.lockedAmount) : '0',
@@ -83,7 +83,7 @@ export function useFreelancerBalance(address: `0x${string}` | undefined) {
     });
 
     return {
-        balance: data ?? 0n,
+        balance: data ?? BigInt(0),
         balanceFormatted: data ? formatEther(data) : '0',
         isLoading,
         isError,
@@ -111,8 +111,8 @@ export function usePlatformFees() {
         ],
     });
 
-    const feePercentage = data?.[0]?.result ?? 0n;
-    const feeBalance = data?.[1]?.result ?? 0n;
+    const feePercentage = data?.[0]?.result ?? BigInt(0);
+    const feeBalance = data?.[1]?.result ?? BigInt(0);
 
     return {
         feePercentage: Number(feePercentage) / 100, // Convert basis points to percentage
