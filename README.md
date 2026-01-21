@@ -9,20 +9,25 @@ Secure Escrow: Automated payment handling ensures that funds are safe and only r
 Modern Interface: A responsive Next.js frontend with Privy authentication for easy wallet and email login.
 
 
-📦 Repository Structure
+
+<pre>
+Repository Structure
+
 backend/
-├─ contracts/        # Solidity smart contracts
-├─ script/           # Deployment scripts
-├─ test/             # Foundry tests
-├─ sdk/              # TypeScript SDK
-├─ subgraph/         # The Graph indexer
-├─ deployments/      # Deployed contract addresses
+├── contracts/        Solidity smart contracts
+├── script/           Deployment scripts
+├── test/             Foundry tests
+├── sdk/              TypeScript SDK
+├── subgraph/         The Graph indexer
+├── deployments/      Deployed contract addresses
 
 frontend/
-├─ src/              # App source code
-├─ public/           # Static assets
+├── src/              App source code
+├── public/           Static assets
 
 README.md
+</pre>
+
 
 
 
