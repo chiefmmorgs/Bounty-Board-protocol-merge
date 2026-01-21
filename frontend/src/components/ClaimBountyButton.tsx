@@ -4,11 +4,6 @@ import { useClaimBounty } from '@/hooks';
 import { useAccount } from 'wagmi';
 import { Bounty, BountyStatus } from '@/config/abis';
 
-// Convert platform score (0-100) to Ethos score (0-2000)
-function platformToEthosScore(platformScore: number | bigint): number {
-    return Number(platformScore) * 20;
-}
-
 interface ClaimBountyButtonProps {
     bounty: Bounty;
     userReputation?: number; // This is now Ethos score (0-2000)
@@ -20,8 +15,8 @@ export function ClaimBountyButton({ bounty, userReputation = 0, onSuccess, class
     const { isConnected, address } = useAccount();
     const { claimBounty, isLoading, isSuccess, isError, error, hash, reset } = useClaimBounty();
 
-    // Convert bounty's minRepRequired (platform score 0-100) to Ethos score (0-2000)
-    const minEthosScore = platformToEthosScore(bounty.minRepRequired);
+    // minRepRequired is already in Ethos score (0-2000)
+    const minEthosScore = Number(bounty.minRepRequired);
 
     const canClaim =
         isConnected &&

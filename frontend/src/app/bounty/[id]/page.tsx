@@ -13,11 +13,6 @@ import { contracts } from '@/config/contracts';
 import { submissionManagerAbi } from '@/config/abis';
 import { getBountyMetadata } from '@/services/bountyMetadata';
 
-// Convert platform score (0-100) to Ethos score (0-2000)
-function platformToEthosScore(platformScore: number | bigint): number {
-    return Number(platformScore) * 20;
-}
-
 export default function BountyDetailPage() {
     const params = useParams();
     const id = params?.id as string;
@@ -122,8 +117,8 @@ export default function BountyDetailPage() {
     const isUserClient = isConnected && address?.toLowerCase() === bounty.client.toLowerCase();
     const isUserFreelancer = isConnected && freelancer && address?.toLowerCase() === freelancer.toLowerCase();
 
-    // Convert platform minRepRequired to Ethos score
-    const minEthosScore = platformToEthosScore(bounty.minRepRequired);
+    // minRepRequired is already in Ethos score (0-2000)
+    const minEthosScore = Number(bounty.minRepRequired);
 
     // Calculate net payment
     const netPaymentWei = bounty.escrowAmount - bounty.platformFee;

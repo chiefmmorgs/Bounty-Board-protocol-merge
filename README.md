@@ -1,14 +1,27 @@
 # Bounty Board Protocol 
 Production-ready decentralized bounty board platform with Ethos Network reputation integration, AI-powered matching, and a modern Next.js frontend.
 
+<<<<<<< Updated upstream
 What It Can Do
 Decentralized Bounties: Create, fund, and complete tasks in a trustless environment using smart contracts on Base Sepolia.
 Reputation Integration: Seamlessly integrates with Ethos Network to verify user reputation (0-2000 score), ensuring high-quality interactions.
 AI-Powered Matching: Utilizes AI services to match developers with bounties that fit their skill sets and reliability scores.
 Secure Escrow: Automated payment handling ensures that funds are safe and only released upon valid submission verification.
 Modern Interface: A responsive Next.js frontend with Privy authentication for easy wallet and email login.
+=======
+## What It Can Do
+
+- **Decentralized Bounties**: Create, fund, and complete tasks in a trustless environment using smart contracts on Base Sepolia.
+- **Reputation Integration**: Seamlessly integrates with **Ethos Network** to verify user reputation (0-2000 score), ensuring high-quality interactions.
+- **AI-Powered Matching**: Utilizes AI services to match developers with bounties that fit their skill sets and reliability scores.
+- **Secure Escrow**: Automated payment handling ensures that funds are safe and only released upon valid submission verification.
+- **Modern Interface**: A responsive Next.js frontend with Privy authentication for easy wallet and email login.
+
+## 📦 Repository Structure
+>>>>>>> Stashed changes
 
 
+<<<<<<< Updated upstream
 
 <pre>
 Repository Structure
@@ -31,6 +44,10 @@ README.md
 
 ## 🛠️ Prerequisites
 
+=======
+## 🛠️ Prerequisites
+
+>>>>>>> Stashed changes
 Before you begin, ensure you have the following installed:
 
 - **Node.js** (v18 or higher)
@@ -63,7 +80,10 @@ forge install
 forge build
 forge test
 ```
+<<<<<<< Updated upstream
 
 
 
 
+=======
+>>>>>>> Stashed changes

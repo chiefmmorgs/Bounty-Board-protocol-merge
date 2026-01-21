@@ -11,7 +11,7 @@ import { useState, ReactNode } from 'react';
 const wagmiConfig = createConfig({
     chains: [baseSepolia],
     transports: {
-        [baseSepolia.id]: http(process.env.NEXT_PUBLIC_RPC_URL || 'https://sepolia.base.org'),
+        [baseSepolia.id]: http(process.env.NEXT_PUBLIC_RPC_URL || 'https://base-sepolia.g.alchemy.com/v2/mWTlwA58Ueq8DU58coOAy_199ch-oisL'),
     },
 });
 

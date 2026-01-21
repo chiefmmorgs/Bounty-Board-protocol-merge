@@ -7,10 +7,10 @@ const customBaseSepolia = {
     ...baseSepolia,
     rpcUrls: {
         default: {
-            http: [process.env.NEXT_PUBLIC_RPC_URL || 'https://sepolia.base.org'],
+            http: [process.env.NEXT_PUBLIC_RPC_URL || 'https://base-sepolia.g.alchemy.com/v2/mWTlwA58Ueq8DU58coOAy_199ch-oisL'],
         },
         public: {
-            http: ['https://sepolia.base.org'],
+            http: ['https://base-sepolia.g.alchemy.com/v2/mWTlwA58Ueq8DU58coOAy_199ch-oisL'],
         },
     },
 };
@@ -20,7 +20,7 @@ export const config = getDefaultConfig({
     projectId: process.env.NEXT_PUBLIC_WALLETCONNECT_PROJECT_ID || 'demo',
     chains: [customBaseSepolia],
     transports: {
-        [baseSepolia.id]: http(process.env.NEXT_PUBLIC_RPC_URL || 'https://sepolia.base.org'),
+        [baseSepolia.id]: http(process.env.NEXT_PUBLIC_RPC_URL || 'https://base-sepolia.g.alchemy.com/v2/mWTlwA58Ueq8DU58coOAy_199ch-oisL'),
     },
     ssr: true,
 });

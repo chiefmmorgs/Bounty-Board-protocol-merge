@@ -6,11 +6,6 @@ import { formatEther } from 'viem';
 import Link from 'next/link';
 import { getBountyMetadata } from '@/services/bountyMetadata';
 
-// Convert platform score (0-100) to Ethos score (0-2000)
-function platformToEthosScore(platformScore: number | bigint): number {
-    return Number(platformScore) * 20;
-}
-
 interface BountyCardProps {
     bounty: Bounty;
     showDetails?: boolean;
@@ -34,8 +29,8 @@ export function BountyCard({ bounty, showDetails = false }: BountyCardProps) {
     const netPaymentWei = bounty.escrowAmount - bounty.platformFee;
     const netPayment = formatEther(netPaymentWei);
 
-    // Convert platform minRepRequired to Ethos score
-    const minEthosScore = platformToEthosScore(bounty.minRepRequired);
+    // minRepRequired is already in Ethos score (0-2000)
+    const minEthosScore = Number(bounty.minRepRequired);
 
     // Truncate title if too long
     const displayTitle = metadata?.title
