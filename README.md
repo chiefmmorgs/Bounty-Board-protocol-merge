@@ -1,4 +1,4 @@
-# Bounty Board Protocol - Full Stack Monorepo
+# Bounty Board Protocol 
 Production-ready decentralized bounty board platform with Ethos Network reputation integration, AI-powered matching, and a modern Next.js frontend.
 
 What It Can Do
@@ -63,6 +63,7 @@ forge install
 forge build
 forge test
 ```
+
 
 
 
