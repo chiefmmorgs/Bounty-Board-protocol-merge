@@ -29,6 +29,40 @@ README.md
 </pre>
 
 
+## 🛠️ Prerequisites
+
+Before you begin, ensure you have the following installed:
+
+- **Node.js** (v18 or higher)
+- **Foundry** (for smart contract development)
+- **Git**
+
+## 🚀 Getting Started
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/chiefmmorgs/Bounty-Board-protocol-merge.git
+cd Bounty-Board-protocol-merge
+```
+
+### 2. Frontend Setup (Next.js)
+
+```bash
+cd frontend
+npm install
+cp .env.example .env.local
+npm run dev
+```
+
+### 3. Backend Setup (Smart Contracts)
+
+```bash
+cd backend
+forge install
+forge build
+forge test
+```
 
 
 
