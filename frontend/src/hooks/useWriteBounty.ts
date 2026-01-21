@@ -114,7 +114,7 @@ export function useCreateBounty() {
                 args: [
                     reqHash,
                     deadlineTimestamp,
-                    params.minRepRequired,
+                    BigInt(params.minRepRequired),
                     BigInt(params.maxRevisions),
                     reviewPeriodSeconds,
                 ],
