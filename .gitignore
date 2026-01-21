@@ -1,0 +1,42 @@
+# Dependencies
+node_modules/
+.pnp/
+.pnp.js
+
+# Build outputs
+backend/out/
+backend/cache/
+backend/broadcast/
+frontend/.next/
+frontend/out/
+
+# Environment files
+.env
+.env.local
+.env.*.local
+*.env
+
+# Debug logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Foundry
+backend/lib/forge-std/
+backend/lib/openzeppelin-contracts-upgradeable/
+
+# TypeScript
+*.tsbuildinfo
+
+# Testing
+coverage/
