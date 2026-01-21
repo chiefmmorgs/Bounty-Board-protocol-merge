@@ -10,16 +10,20 @@ Modern Interface: A responsive Next.js frontend with Privy authentication for ea
 
 
 📦 Repository Structure
-├── backend/          # Smart contracts, SDK, and backend services
-│   ├── contracts/    # Solidity smart contracts
-│   ├── script/       # Deployment scripts
-│   ├── test/         # Foundry tests
-│   ├── sdk/          # TypeScript SDK
-│   ├── subgraph/     # The Graph indexer
-│   └── deployments/  # Deployed contract addresses
-├── frontend/         # Next.js web application
-│   ├── src/          # App source code
-│   └── public/       # Static assets
-└── README.md
+backend/
+├─ contracts/        # Solidity smart contracts
+├─ script/           # Deployment scripts
+├─ test/             # Foundry tests
+├─ sdk/              # TypeScript SDK
+├─ subgraph/         # The Graph indexer
+├─ deployments/      # Deployed contract addresses
+
+frontend/
+├─ src/              # App source code
+├─ public/           # Static assets
+
+README.md
+
+
 
 
