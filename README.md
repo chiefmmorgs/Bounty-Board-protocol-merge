@@ -22,3 +22,4 @@ Modern Interface: A responsive Next.js frontend with Privy authentication for ea
 │   └── public/       # Static assets
 └── README.md
 
+
